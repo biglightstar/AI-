@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sort -k2)",
+      "PowerShell(New-Item *)",
+      "Bash(New-Item *)",
+      "WebFetch(domain:www.bilibili.com)",
+      "Bash(python *)",
+      "PowerShell(python \"C:\\\\Users\\\\15359\\\\Desktop\\\\code\\\\python-fullstack\\\\pythonCode\\\\timer.py\")",
+      "PowerShell(git *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\15359\\\\Desktop\\\\code\\\\python-fullstack\\\\sessions\" -Directory)",
+      "Bash(Sort-Object Name -Descending)",
+      "Bash(Select-Object -First 5)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\15359\\\\Desktop\\\\code\\\\python-fullstack\\\\sessions\" -Directory | Sort-Object Name -Descending | Select-Object -First 5 | ForEach-Object { $_.Name })",
+      "PowerShell($env:PYTHONIOENCODING='utf-8'; python pythonCode/playlist.py)",
+      "PowerShell(if \\(-not \\(Test-Path \"sessions/2026-06-08\"\\)\\) { New-Item -ItemType Directory -Force \"sessions/2026-06-08\" })",
+      "PowerShell($env:PYTHONIOENCODING='utf-8'; python pythonCode/run_calc.py)",
+      "PowerShell($env:PYTHONIOENCODING='utf-8'; python pythonCode/todo_data.py)",
+      "PowerShell(rm *)",
+      "Bash(pip install *)",
+      "Bash(mypy pythonCode/playlist.py)",
+      "Bash(mkdir -p \"D:/code/python-fullstack/progress\")",
+      "Bash(mkdir -p \"D:/code/python-fullstack/sessions/2026-06-19\")",
+      "Bash(go fmt *)",
+      "Bash(mkdir -p \"D:/code/python-fullstack/Go/src/g1-basics/hello-go\")",
+      "Bash(go mod *)",
+      "Bash(go run *)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(Rename-Item *)",
+      "WebFetch(domain:gopl-zh.github.io)",
+      "WebSearch",
+      "Bash(go get *)"
+    ]
+  }
+}

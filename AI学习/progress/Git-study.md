@@ -16,8 +16,8 @@
 
 ## 快速统计
 
-- **总体进度**：1/18 话题掌握 = **6%**
-- **上次学习**：2026-07-13 — GIT1.1 版本控制概念 + 首个仓库实操
+- **总体进度**：6/18 话题掌握 = **33%**
+- **上次学习**：2026-07-14（晚间）— GIT2.1 init/clone + GIT2.3 blame + GIT2.4 tag + GIT2.5 stash
 - **学习方向**：Git 基础概念 → 本地操作 → 分支管理 → 远程协作 → 自动化 CI/CD
 
 ---
@@ -26,8 +26,8 @@
 
 | 领域 | 权重 | 话题数 | 掌握 | 状态 | 优先级 |
 |------|------|--------|------|------|--------|
-| **GIT1. Git 基础概念与环境** | 20% | 4 | 1 | 🟡 进行中 | 高 |
-| **GIT2. Git 本地核心操作** | 30% | 5 | 0 | 未开始 | 高 |
+| **GIT1. Git 基础概念与环境** | 20% | 4 | 4 | 🟢 已完成 | — |
+| **GIT2. Git 本地核心操作** | 30% | 5 | 4 | 🟡 进行中 | 高 |
 | **GIT3. Git 分支管理** | 22% | 3 | 0 | 未开始 | 高 |
 | **GIT4. Git 远程协作** | 18% | 3 | 0 | 未开始 | 中 |
 | **GIT5. DevOps 自动化** | 10% | 3 | 0 | 未开始 | 低 |
@@ -40,14 +40,12 @@
 
 > 📖 参考：[Git 教程](https://www.runoob.com/git/git-tutorial.html) | [安装配置](https://www.runoob.com/git/git-install-setup.html) | [工作流程](https://www.runoob.com/git/git-workflow.html) | [工作区暂存区版本库](https://www.runoob.com/git/git-workspace-index-repo.html)
 
-### 已掌握（1/4）
+### 已掌握（4/4）✅
 
 - [x] **GIT1.1** Git 简介与版本控制概念（什么是 Git/集中式 vs 分布式版本控制/Git 诞生背景/Git vs SVN 区别/适用场景）— 2026-07-13
-
-### 未学习（3/4）
-- [ ] **GIT1.2** Git 安装与配置（Linux—yum/apt/源码安装 Windows—安装包/winget Mac—brew/git config 用户信息/文本编辑器配置/差异分析工具/SSH 密钥生成/验证安装 git --version）
-- [ ] **GIT1.3** Git 工作流程（工作区 Working Directory/暂存区 Staging Area/本地仓库 Local Repository/远程仓库 Remote/完整流程：clone→branch→edit→stage→commit→pull→push→PR→merge→delete branch/与 FTP 直接上传的本质区别）
-- [ ] **GIT1.4** Git 工作区、暂存区和版本库深入（三区关系图解/文件四种状态转换—Untracked/Modified/Staged/Committed/git add 的本质—将文件从工作区复制到暂存区/git commit 的本质—将暂存区内容快照保存到版本库/动手实验：创建文件三区流转）
+- [x] **GIT1.2** Git 安装与配置（git config 三级配置 system/global/local、.gitconfig 文件位置与格式、git config --list --show-origin 查看配置来源）— 2026-07-14
+- [x] **GIT1.3** Git 工作流程（工作区 Working Directory/暂存区 Staging Area/仓库 Repository 三区模型、git status 状态解读、完整流转：edit→add→commit）— 2026-07-14
+- [x] **GIT1.4** Git 工作区、暂存区和版本库深入（git add 本质—内容复制到暂存区+开始追踪/文件四种状态 Untracked/Modified/Staged/Committed/三区流转动手实验）— 2026-07-14
 
 ---
 
@@ -57,13 +55,15 @@
 
 > 📖 参考：[创建仓库](https://www.runoob.com/git/git-create-repository.html) | [基本操作](https://www.runoob.com/git/git-basic-operations.html) | [提交历史](https://www.runoob.com/git/git-commit-history.html) | [标签](https://www.runoob.com/git/git-tag.html) | [进阶操作](https://www.runoob.com/git/git-advance.html)
 
-### 未学习（0/5）
+### 已掌握（5/5）
 
-- [ ] **GIT2.1** git init 与 git clone（git init 初始化本地仓库/git clone <url> 克隆远程仓库/git clone -b <branch> 指定分支克隆/仓库目录结构解析/.git 目录简介/裸仓库 bare repository 概念）
-- [ ] **GIT2.2** Git 基本操作（git add 添加文件到暂存区/git status 查看状态/git diff 查看差异/git commit 提交到本地仓库/git reset 回退操作/git rm 删除文件/git mv 移动重命名/文件状态转换完整流程实战）
-- [ ] **GIT2.3** git log 与 git blame（git log 查看提交历史/常用参数—oneline/graph/author/since/until/grep/git blame 逐行追责/恢复与回退 checkout 检出特定版本/git revert 撤销某次提交/与 git reset 的区别——revert 产生新 commit，reset 改写历史）
-- [ ] **GIT2.4** git tag 标签管理（轻量标签 lightweight tag 创建与删除/附注标签 annotated tag git tag -a -m/查看标签 git tag -l/推送标签到远程 git push --tags/删除远程标签/标签的使用场景——版本发布标记 v1.0.0/语义化版本 semver 规范）
-- [ ] **GIT2.5** Git 进阶操作（交互式暂存 git add -p/暂存工作现场 git stash push/pop/list/apply/drop 场景：临时切换分支/变基 git rebase 原理与 git merge 对比/git rebase -i 交互式变基入门/拣选提交 git cherry-pick 场景：hotfix 移植到不同分支）
+- [x] **GIT2.1** git init 与 git clone（git init 初始化本地仓库已实操/仓库目录结构/.git 目录/仓库根目录概念/git clone 概念理解待远程实操）— 2026-07-14
+- [x] **GIT2.2** Git 基本操作（git add/status/diff/commit/reset/restore 深入掌握/文件状态流转 Untracked→Staged→Committed/— git rm/git mv 待学）— 2026-07-14
+- [x] **GIT2.3** git log 与 git blame（git log 核心参数—oneline/-p/--stat/--author/--since/对比两次 commit/git blame 逐行追责）— 2026-07-14
+- [x] **GIT2.4** git tag 标签管理（轻量标签 git tag/附注标签 git tag -a -m/查看标签 git tag -l/标签用于版本标记 v1.0.0）— 2026-07-14
+- [x] **GIT2.5** Git 进阶操作（git stash 暂存工作现场 stash/pop/list/show/git stash 场景：临时保存半成品修改/git rebase/cherry-pick 待学）— 2026-07-14
+
+### 未学习（0/5）
 
 ---
 
@@ -114,6 +114,14 @@
 | 话题 | 掌握日期 | 掌握程度 | 关键要点 |
 |------|----------|----------|----------|
 | GIT1.1 Git 简介与版本控制概念 | 2026-07-13 | 中高 | 版本控制痛点/存档点模型/分支概念/git init→add→commit 三步流程/命令英文原意 |
+| GIT1.2 Git 安装与配置 | 2026-07-14 | 中 | 三级配置、.gitconfig 文件位置 |
+| GIT1.3 Git 工作流程 | 2026-07-14 | 高 | 三区流转、git status/git diff 理解透彻 |
+| GIT1.4 三区模型深入 | 2026-07-14 | 高 | add 双重作用、暂存区与工作区关系 |
+| GIT2.1 init/clone | 2026-07-14 | 中 | 仓库根目录概念、.git 位置、init 已实操 clone 待学 |
+| GIT2.2 基本操作 | 2026-07-14 | 高 | add/status/diff/commit/reset/restore 核心命令 |
+| GIT2.3 log/blame | 2026-07-14 | 中高 | log 核心参数、blame 逐行追责、路径写法 |
+| GIT2.4 tag | 2026-07-14 | 高 | 标签创建/查看/v1.0.0 里程碑标记 |
+| GIT2.5 stash | 2026-07-14 | 中高 | 暂存工作现场 stash/pop/show/list |
 
 ---
 
@@ -123,7 +131,8 @@
 
 | 盲区 | 严重程度 | 说明 |
 |------|----------|------|
-| GIT1.2-GIT3 全部 | 高 | 安装配置深入、工作流程、三区模型、本地操作、分支管理待学习 |
+| GIT3 分支管理全部 | 高 | 分支创建/合并/冲突解决——Git 最核心特性 |
+| GIT4 远程协作 | 高 | push/pull/PR 流程——团队协作必备技能 |
 
 ### 中优先级
 
@@ -142,6 +151,8 @@
 | 话题 | 解决日期 | 说明 |
 |------|----------|------|
 | GIT1.1 版本控制概念 | 2026-07-13 | 理解了版本控制本质/完成 git init→add→commit 首个存档/掌握三步口诀 |
+| GIT1.2-GIT1.4 三区模型 | 2026-07-14 | 掌握 git config 三级配置/git add 双重作用/三区流转模型/16 题复习正确率 81% |
+| GIT2.1-GIT2.5 本地操作 | 2026-07-14 | 掌握 init/clone 概念/log 历史查看/blame 逐行追责/tag 标签管理/stash 暂存工作现场/路径理解 |
 
 ---
 
@@ -163,33 +174,29 @@
 3. GIT1.3 Git 工作流程
 4. GIT1.4 工作区、暂存区和版本库深入
 
-**第二阶段：本地核心操作（第 2 周，7/20 - 7/26）**
+**第二阶段：本地核心操作（第 1 周，7/13 - 7/14）— ✅ 已提前完成**
 5. GIT2.1 git init 与 git clone
 6. GIT2.2 Git 基本操作——add/commit/status/diff/reset
 7. GIT2.3 git log 与 git blame——历史查看与追溯
-
-**第三阶段：标签与进阶操作（第 3 周，7/27 - 8/2）**
 8. GIT2.4 git tag 标签管理
-9. GIT2.5 Git 进阶操作——stash/rebase/cherry-pick
+9. GIT2.5 Git 进阶操作——stash（已完成）/rebase/cherry-pick 待学
 
-**第四阶段：分支管理（第 4 周，8/3 - 8/9）**
+**第三阶段：分支管理（第 2 周，7/15 - 7/19）**
 10. GIT3.1 Git 分支基础——创建/合并/冲突解决
 11. GIT3.2 Git Flow 工作流
 12. GIT3.3 分支策略与实战练习
 
-**第五阶段：远程协作（第 5 周，8/10 - 8/16）**
+**第四阶段：远程协作（第 3 周，7/20 - 7/26）**
 13. GIT4.1 Git 远程仓库操作
 14. GIT4.2 Git 服务器搭建
 15. GIT4.3 SourceTree GUI 工具
 
-**第六阶段：CI/CD 自动化（第 6 周，8/17 - 8/24）**
-16. GIT5.1 GitHub Actions 核心概念
-17. GIT5.2 GitHub Actions 核心语法
-18. GIT5.3 GitHub Actions 实战
+**第五阶段：CI/CD 自动化（第 4-5 周）**
+16. GIT5.1-GIT5.3 GitHub Actions
 
 ### 下次会话建议
 
-**确定方向**：**GIT1.2 Git 安装与配置** — 你的 Git 已经装好了，重点了解 `git config` 更多配置项和 `.gitconfig` 配置文件
+**确定方向**：**GIT3.1 Git 分支基础** — 分支创建/切换/合并/冲突解决，Git 最核心特性（或切换 Go 语言 G1.3）
 
 **教学要求**：
 - **命令行实操驱动**：不用 GUI 工具，每个命令在终端手敲

@@ -16,8 +16,8 @@
 
 ## 快速统计
 
-- **总体进度**：8/18 话题掌握 = **44%**
-- **上次学习**：2026-07-15 — GIT3.1 分支基础 + GIT4.1 SSH 远程配置 + git push
+- **总体进度**：10/18 话题掌握 = **56%**
+- **上次学习**：2026-07-15 — GIT3.1 分支基础（创建/合并/冲突解决）+ GIT4.1 远程操作全套（SSH/remote add/push/pull/fetch）
 - **学习方向**：Git 基础概念 → 本地操作 → 分支管理 → 远程协作 → 自动化 CI/CD
 
 ---
@@ -73,9 +73,12 @@
 
 > 📖 参考：[分支管理](https://www.runoob.com/git/git-branch.html) | [Git Flow](https://www.runoob.com/git/git-flow.html)
 
-### 未学习（0/3）
+### 已掌握（1/3）
 
-- [ ] **GIT3.1** Git 分支基础（什么是分支——指向 commit 的指针/HEAD 指针概念/创建分支 git branch <name>/切换分支 git checkout git switch/查看分支 git branch -a -r/删除分支 git branch -d -D/合并分支 git merge/Fast-forward 快进合并 vs 三方合并/合并冲突的产生与解决——<<<<<<< ======= >>>>>>> 标记/VS Code 可视化冲突解决/git mergetool）
+- [x] **GIT3.1** Git 分支基础（什么是分支——指向 commit 的指针/HEAD 指针概念/创建分支 git branch/切换分支 git switch/查看分支 git branch/删除分支 git branch -d/合并分支 git merge/合并冲突的产生与解决——<<<<<<< ======= >>>>>>> 标记）— 2026-07-15
+
+### 未学习（2/3）
+
 - [ ] **GIT3.2** Git Flow 工作流（Git Flow 安装 Linux/macOS/Windows/Git Flow 分支模型 5 种分支—master/main/develop/feature/release/hotfix/分支操作原理/初始化 git flow init/创建功能分支 git flow feature start/完成功能分支 git flow feature finish/创建发布分支 git flow release/创建修复分支 git flow hotfix/Git Flow 优缺点——适合固定发布周期的团队，不适合持续部署）
 - [ ] **GIT3.3** 分支策略与实战练习（GitHub Flow——main + 短命 feature 分支 + PR/Trunk-Based Development——主干开发频繁提交/分支命名规范 feat/fix/docs/chore/refactor/test/综合实战：创建 feature 分支→开发提交→推送到远程→创建 PR→Code Review→合并到 main→解决冲突→删除分支 完整流程）
 
@@ -87,9 +90,12 @@
 
 > 📖 参考：[远程仓库](https://www.runoob.com/git/git-remote-repo.html) | [服务器搭建](https://www.runoob.com/git/git-server.html) | [SourceTree](https://www.runoob.com/git/source-tree-intro.html)
 
-### 未学习（0/3）
+### 已掌握（1/3）
 
-- [ ] **GIT4.1** Git 远程仓库操作（添加远程仓库 git remote add/查看远程 git remote -v/从远程拉取 git fetch 只拉不合并 vs git pull 拉取并合并/git pull --rebase 避免多余 merge commit/推送到远程 git push/git push -u 设置上游追踪/删除远程仓库 git remote remove/HTTP vs SSH 协议对比/CODING/GitHub 免密 Push/Pull 配置）
+- [x] **GIT4.1** Git 远程仓库操作（SSH 密钥生成与 GitHub 配置/git remote add 添加远程仓库/git remote -v 查看/git push 推送到远程/git pull 拉取远程更新/git fetch vs git pull 区别/git push -u 设置上游追踪/origin/main 远程跟踪分支概念/HTTP vs SSH 协议对比）— 2026-07-15
+
+### 未学习（2/3）
+
 - [ ] **GIT4.2** Git 服务器搭建（建立裸存储库 bare repository——git init --bare/服务器端安装 Git/创建证书登录 SSH Key/克隆远程仓库 git clone user@server:/path/理解自建 Git 服务器本质：一个可通过 SSH 访问的裸仓库/与 GitHub/Gitee 的关系）
 - [ ] **GIT4.3** SourceTree GUI 工具（SourceTree 安装与配置/连接 GitHub 账户/创建本地仓库/图形化理解 Git 操作/SourceTree vs 命令行——何时用 GUI 何时用命令行/不依赖 GUI，以命令行理解为核心）
 
@@ -122,6 +128,8 @@
 | GIT2.3 log/blame | 2026-07-14 | 中高 | log 核心参数、blame 逐行追责、路径写法 |
 | GIT2.4 tag | 2026-07-14 | 高 | 标签创建/查看/v1.0.0 里程碑标记 |
 | GIT2.5 stash | 2026-07-14 | 中高 | 暂存工作现场 stash/pop/show/list |
+| GIT3.1 分支基础 | 2026-07-15 | 高 | 分支创建/切换/合并/冲突解决/删除分支/理解分支是指针 |
+| GIT4.1 远程操作 | 2026-07-15 | 中高 | SSH 密钥配置/git remote add/push/pull/fetch/clone 概念/远程跟踪分支 origin/main |
 
 ---
 
@@ -131,19 +139,8 @@
 
 | 盲区 | 严重程度 | 说明 |
 |------|----------|------|
-| GIT3 分支管理全部 | 高 | 分支创建/合并/冲突解决——Git 最核心特性 |
-| GIT4 远程协作 | 高 | push/pull/PR 流程——团队协作必备技能 |
-
-### 中优先级
-
-| 盲区 | 严重程度 | 说明 |
-|------|----------|------|
-| GIT4 远程协作 | 中 | push/pull/PR 流程是团队协作必备技能 |
-
-### 低优先级
-
-| 盲区 | 严重程度 | 说明 |
-|------|----------|------|
+| GIT3.2-GIT3.3 分支策略 | 高 | Git Flow/GitHub Flow/分支命名规范/PR 流程待学 |
+| GIT4.2-GIT4.3 远程深入 | 中 | 服务器搭建/SourceTree 使用暂缓 |
 | GIT5 CI/CD | 低 | GitHub Actions 可在实际项目中边做边学 |
 
 ### 最近解决
@@ -153,6 +150,8 @@
 | GIT1.1 版本控制概念 | 2026-07-13 | 理解了版本控制本质/完成 git init→add→commit 首个存档/掌握三步口诀 |
 | GIT1.2-GIT1.4 三区模型 | 2026-07-14 | 掌握 git config 三级配置/git add 双重作用/三区流转模型/16 题复习正确率 81% |
 | GIT2.1-GIT2.5 本地操作 | 2026-07-14 | 掌握 init/clone 概念/log 历史查看/blame 逐行追责/tag 标签管理/stash 暂存工作现场/路径理解 |
+| GIT3.1 分支基础 | 2026-07-15 | 掌握分支创建/切换/合并/冲突解决/删除分支——分支本质是指向 commit 的指针 |
+| GIT4.1 远程操作 | 2026-07-15 | 掌握 SSH 配置/remote add/push/pull/fetch/理解远程跟踪分支 origin/main |
 
 ---
 
@@ -181,22 +180,27 @@
 8. GIT2.4 git tag 标签管理
 9. GIT2.5 Git 进阶操作——stash（已完成）/rebase/cherry-pick 待学
 
-**第三阶段：分支管理（第 2 周，7/15 - 7/19）**
-10. GIT3.1 Git 分支基础——创建/合并/冲突解决
-11. GIT3.2 Git Flow 工作流
-12. GIT3.3 分支策略与实战练习
+**第三阶段：分支管理（7/15）— ✅ GIT3.1 已完成**
+10. GIT3.1 Git 分支基础——创建/切换/合并/冲突解决 ✅
+11. GIT3.2 Git Flow 工作流（待学）
+12. GIT3.3 分支策略与实战练习（待学）
 
-**第四阶段：远程协作（第 3 周，7/20 - 7/26）**
-13. GIT4.1 Git 远程仓库操作
-14. GIT4.2 Git 服务器搭建
-15. GIT4.3 SourceTree GUI 工具
+**第四阶段：远程协作（7/15）— ✅ GIT4.1 已完成**
+13. GIT4.1 Git 远程仓库操作（SSH/push/pull/fetch）✅ 
+14. GIT4.2 服务器搭建（暂缓）
+15. GIT4.3 SourceTree GUI（暂缓）
 
-**第五阶段：CI/CD 自动化（第 4-5 周）**
-16. GIT5.1-GIT5.3 GitHub Actions
+**第五阶段：剩余内容**
+16. GIT3.2-GIT3.3 分支策略
+17. GIT4.2-GIT4.3 远程深入
+18. GIT5.1-GIT5.3 CI/CD 自动化
 
 ### 下次会话建议
 
-**确定方向**：**GIT3.1 Git 分支基础** — 分支创建/切换/合并/冲突解决，Git 最核心特性（或切换 Go 语言 G1.3）
+**可选项**：
+1. **GIT3.2 Git Flow + GIT3.3 分支策略** — 团队协作标准流程
+2. **GIT4.2-GIT4.3** 远程深入
+3. **切换 Go 语言 G1.3** — 第一个 Go 程序深度解剖
 
 **教学要求**：
 - **命令行实操驱动**：不用 GUI 工具，每个命令在终端手敲

@@ -16,8 +16,8 @@
 
 ## 快速统计
 
-- **总体进度**：15/18 话题掌握 = **83%**
-- **上次学习**：2026-07-16 — git rebase/cherry-pick/revert/reflog/.gitignore 全部收尾
+- **总体进度**：16/18 话题掌握 = **89%**
+- **上次学习**：2026-07-16 — GIT5.1 CI/CD GitHub Actions 首次配置
 - **学习方向**：Git 基础概念 → 本地操作 → 分支管理 → 远程协作 → 自动化 CI/CD
 
 ---
@@ -30,7 +30,7 @@
 | **GIT2. Git 本地核心操作** | 30% | 5 | 5 | 🟢 已完成 | — |
 | **GIT3. Git 分支管理** | 22% | 3 | 3 | 🟢 已完成 | — |
 | **GIT4. Git 远程协作** | 18% | 3 | 1 | 🟡 已起步 | 中 |
-| **GIT5. DevOps 自动化** | 10% | 3 | 0 | 未开始 | 低 |
+| **GIT5. DevOps 自动化** | 10% | 3 | 1 | 🟡 已起步 | 低 |
 
 ---
 
@@ -106,9 +106,12 @@
 
 > 📖 参考：[GitHub Actions](https://www.runoob.com/git/github-actions.html)
 
-### 未学习（0/3）
+### 已掌握（1/3）
 
-- [ ] **GIT5.1** GitHub Actions 核心概念（什么是 CI/CD/Workflow 工作流/Job 任务/Step 步骤/Action 动作/Event 触发事件/Runner 运行环境/目录结构 .github/workflows/*.yml/第一个 Workflow 编写—Hello World）
+- [x] **GIT5.1** GitHub Actions 核心概念（CI/CD/Workflow 工作流/Job 任务/Step 步骤/Action 动作/Event 触发事件/Runner 运行环境/目录结构 .github/workflows/*.yml/.github/workflows/ 必须放在仓库根目录/第一个 Workflow 编写 Hello World）— 2026-07-16
+
+### 未学习（2/3）
+
 - [ ] **GIT5.2** GitHub Actions 核心语法（触发事件 on—push/pull_request/schedule 定时/workflow_dispatch 手动/Jobs 与 Steps 详解/runs-on 运行环境/needs Job 间依赖/if 条件执行/环境变量 env/github 内置上下文变量/Secrets 敏感信息管理/矩阵构建 Matrix—多环境多版本同时测试/常用 Actions—checkout/setup-node/setup-python/cache/upload-artifact）
 - [ ] **GIT5.3** GitHub Actions 实战（Node.js 项目 CI—自动测试/Python 项目 CI—pytest 自动运行/构建并推送 Docker 镜像/构建后自动部署到服务器/定时任务 自动备份数据库/调试技巧—Debug 日志/本地测试 Workflow 用 act/常见问题与注意事项）
 
@@ -127,7 +130,9 @@
 | GIT2.3 log/blame | 2026-07-14 | 中高 | log 核心参数、blame 逐行追责、路径写法 |
 | GIT2.4 tag | 2026-07-14 | 高 | 标签创建/查看/v1.0.0 里程碑标记 |
 | GIT2.5 stash | 2026-07-14 | 中高 | 暂存工作现场 stash/pop/show/list |
+| GIT2.5 rebase/cherry-pick/revert/reflog | 2026-07-16 | 高 | rebase/cherry-pick/revert/reflog/.gitignore |
 | GIT3.1 分支基础 | 2026-07-15 | 高 | 分支创建/切换/合并/冲突解决/删除分支/理解分支是指针 |
+| GIT5.1 CI/CD | 2026-07-16 | 中 | GitHub Actions 核心概念/on: [push]/jobs/steps/runs-on/checkout
 | GIT4.1 远程操作 | 2026-07-15 | 中高 | SSH 密钥配置/git remote add/push/pull/fetch/clone 概念/远程跟踪分支 origin/main |
 | GIT2.5 rebase/cherry-pick/revert/reflog | 2026-07-16 | 高 | git rebase/cherry-pick/git revert/ git reflog/ .gitignore |
 

@@ -157,7 +157,132 @@ git stash pop        # 取回来（pop = 弹出）
 
 ---
 
+## 四、进阶操作
+
+### 4.1 `.gitignore` — 忽略文件
+
+**ignore** = 忽略
+
+```
+*.exe            # 忽略所有 exe 文件
+node_modules/    # 忽略整个文件夹（不管在哪）
+/build/          # 忽略特定路径
+!.env.example    # 例外，不忽略
+```
+
+⚠️ `.gitignore` 只对 **未追踪（Untracked）** 的文件有效。已追踪的文件需要先 `git rm --cached`。
+
+查看被忽略的文件：`git status --ignored`
+
+### 4.2 `git rebase` — 变基
+
+**rebase** = re（重新）+ base（基础）
+
+把当前分支的提交"移植"到另一个分支的最新位置，让历史变成一条直线。
+
+```
+合并前：
+main:     A — B — C
+feature:       D — E
+
+rebase 后（没有分叉）：
+main:     A — B — C
+feature:            D — E
+```
+
+⚡ 黄金法则：**永远不要对已经推送到远程的 commit 做 rebase。**
+
+### 4.3 `git cherry-pick` — 拣选提交
+
+只挑某一个 commit 合并到当前分支。
+
+```bash
+git cherry-pick 哈希值
+```
+
+| 命令 | 搬什么 |
+|------|--------|
+| `git merge` | 整个分支 |
+| `git rebase` | 整条分支（改写历史）|
+| `git cherry-pick` | **只挑一个 commit** |
+
+### 4.4 `git revert` — 安全撤销
+
+产生一个新 commit 来"抵消"旧 commit 的修改，历史完整保留。
+
+```
+git reset 的效果：
+... → A → B            ← B 被彻底抹掉
+
+git revert 的效果：
+... → A → B → Revert B ← B 还在，新增一条"反做"记录
+```
+
+| 场景 | 用哪个 |
+|------|--------|
+| 还没 push | `git reset` |
+| 已经 push | `git revert` |
+
+### 4.5 `git reflog` — 操作日志
+
+记录所有 HEAD 移动历史，是找回"误删"数据的终极手段。
+
+```bash
+git reflog
+# HEAD@{0}: commit: xxx
+# HEAD@{1}: checkout: moving from main to feature
+```
+
+---
+
+## 五、远程仓库
+
+### 5.1 远程操作命令
+
+| 命令 | 做什么 |
+|------|--------|
+| `ssh-keygen` | 生成 SSH 密钥 |
+| `ssh -T git@github.com` | 测试 SSH 连接 |
+| `git remote add origin 地址` | 添加远程仓库 |
+| `git remote -v` | 查看远程仓库 |
+| `git push -u origin main` | 推送并设置默认路线 |
+| `git push` | 简写推送 |
+| `git pull origin main` | 拉取并自动合并 |
+| `git fetch origin main` | 只下载不合并 |
+| `git clone 地址` | 克隆别人的完整仓库 |
+
+### 5.2 远程跟踪分支
+
+```bash
+origin/main    # 存在 .git/refs/remotes/origin/main
+               # 是"我上次从远程拉到的那个 commit"
+```
+
+---
+
+## 六、CI/CD（持续集成/持续部署）
+
+**CI** = 每次 push 自动运行测试
+**CD** = 测试通过后自动部署
+
+GitHub Actions 配置文件必须放在：**仓库根目录下的 `.github/workflows/*.yml`**
+
+```yaml
+name: CI
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test
+```
+
+---
+
 ## 核心口诀
 
 > **改 → add → commit**（三步循环）
 > **工作区 → 暂存区 → 仓库**（三区流转）
+> **本地 → push → 远程**（远程协作）
+

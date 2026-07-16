@@ -16,8 +16,8 @@
 
 ## 快速统计
 
-- **总体进度**：10/18 话题掌握 = **56%**
-- **上次学习**：2026-07-15（晚间）— GIT3.1 + GIT4.1 完整掌握，个人笔记整理
+- **总体进度**：15/18 话题掌握 = **83%**
+- **上次学习**：2026-07-16 — git rebase/cherry-pick/revert/reflog/.gitignore 全部收尾
 - **学习方向**：Git 基础概念 → 本地操作 → 分支管理 → 远程协作 → 自动化 CI/CD
 
 ---
@@ -27,8 +27,8 @@
 | 领域 | 权重 | 话题数 | 掌握 | 状态 | 优先级 |
 |------|------|--------|------|------|--------|
 | **GIT1. Git 基础概念与环境** | 20% | 4 | 4 | 🟢 已完成 | — |
-| **GIT2. Git 本地核心操作** | 30% | 5 | 4 | 🟡 进行中 | 高 |
-| **GIT3. Git 分支管理** | 22% | 3 | 1 | 🟡 进行中 | 高 |
+| **GIT2. Git 本地核心操作** | 30% | 5 | 5 | 🟢 已完成 | — |
+| **GIT3. Git 分支管理** | 22% | 3 | 3 | 🟢 已完成 | — |
 | **GIT4. Git 远程协作** | 18% | 3 | 1 | 🟡 已起步 | 中 |
 | **GIT5. DevOps 自动化** | 10% | 3 | 0 | 未开始 | 低 |
 
@@ -73,14 +73,13 @@
 
 > 📖 参考：[分支管理](https://www.runoob.com/git/git-branch.html) | [Git Flow](https://www.runoob.com/git/git-flow.html)
 
-### 已掌握（1/3）
+### 已掌握（3/3）✅
 
 - [x] **GIT3.1** Git 分支基础（什么是分支——指向 commit 的指针/HEAD 指针概念/创建分支 git branch/切换分支 git switch/查看分支 git branch/删除分支 git branch -d/合并分支 git merge/合并冲突的产生与解决——<<<<<<< ======= >>>>>>> 标记）— 2026-07-15
+- [x] **GIT3.2** Git Flow 工作流（5 种分支模型 main/develop/feature/release/hotfix/完整实操流程）— 2026-07-16
+- [x] **GIT3.3** 分支策略与实战练习（GitHub Flow——main + feature + PR/分支命名规范/Git Flow vs GitHub Flow）— 2026-07-16
 
-### 未学习（2/3）
-
-- [ ] **GIT3.2** Git Flow 工作流（Git Flow 安装 Linux/macOS/Windows/Git Flow 分支模型 5 种分支—master/main/develop/feature/release/hotfix/分支操作原理/初始化 git flow init/创建功能分支 git flow feature start/完成功能分支 git flow feature finish/创建发布分支 git flow release/创建修复分支 git flow hotfix/Git Flow 优缺点——适合固定发布周期的团队，不适合持续部署）
-- [ ] **GIT3.3** 分支策略与实战练习（GitHub Flow——main + 短命 feature 分支 + PR/Trunk-Based Development——主干开发频繁提交/分支命名规范 feat/fix/docs/chore/refactor/test/综合实战：创建 feature 分支→开发提交→推送到远程→创建 PR→Code Review→合并到 main→解决冲突→删除分支 完整流程）
+### 未学习（0/3）
 
 ---
 
@@ -130,6 +129,7 @@
 | GIT2.5 stash | 2026-07-14 | 中高 | 暂存工作现场 stash/pop/show/list |
 | GIT3.1 分支基础 | 2026-07-15 | 高 | 分支创建/切换/合并/冲突解决/删除分支/理解分支是指针 |
 | GIT4.1 远程操作 | 2026-07-15 | 中高 | SSH 密钥配置/git remote add/push/pull/fetch/clone 概念/远程跟踪分支 origin/main |
+| GIT2.5 rebase/cherry-pick/revert/reflog | 2026-07-16 | 高 | git rebase/cherry-pick/git revert/ git reflog/ .gitignore |
 
 ---
 
@@ -139,8 +139,8 @@
 
 | 盲区 | 严重程度 | 说明 |
 |------|----------|------|
-| GIT3.2-GIT3.3 分支策略 | 高 | Git Flow/GitHub Flow/分支命名规范/PR 流程待学 |
-| GIT4.2-GIT4.3 远程深入 | 中 | 服务器搭建/SourceTree 使用暂缓 |
+| GIT4.2-GIT4.3 远程深入 | 低 | 服务器搭建/SourceTree 使用可暂缓 |
+| GIT5 CI/CD | 低 | GitHub Actions 可在实际项目中边做边学 |
 | GIT5 CI/CD | 低 | GitHub Actions 可在实际项目中边做边学 |
 
 ### 最近解决
